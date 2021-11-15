@@ -33,7 +33,7 @@ public class QuadroController {
 	public ResponseEntity<Quadro> findById(@PathVariable(value="id") Integer quadroId) {
 		return new ResponseEntity<>(quadroService.findById(quadroId), HttpStatus.OK);
 	}
-	
+		
 	@PostMapping
 	public ResponseEntity<Quadro> save(@RequestBody Quadro quadro) {
 		return new ResponseEntity<>(quadroService.save(quadro), HttpStatus.OK);

@@ -43,6 +43,4 @@ public class UsuarioController {
 		usuarioService.remove(usuario);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
-	
-	
 }

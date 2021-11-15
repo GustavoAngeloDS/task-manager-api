@@ -29,16 +29,12 @@ public class Tarefa {
 	@Temporal(TemporalType.DATE)
 	@Column(nullable = true)
 	Calendar dataFinalizacao;
-	
+
 	@ManyToOne
-	@JoinColumn(name="fk_usuario")
-	Usuario usuario; 
-	
-	@ManyToOne
-	@JoinColumn(name="fk_coluna")
+	@JoinColumn(name="id_coluna")
 	Coluna coluna;
 	
 	@ManyToOne
-	@JoinColumn(name="fk_quadro")
+	@JoinColumn(name="id_quadro")
 	Quadro quadro;
 }

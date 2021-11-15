@@ -27,9 +27,5 @@ public class Usuario {
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "usuario")
-	List<Tarefa> tarefas = new ArrayList<Tarefa>();
-	
-	@JsonIgnore
-	@OneToMany(mappedBy = "usuario")
 	List<Quadro> quadros = new ArrayList<Quadro>();
 }

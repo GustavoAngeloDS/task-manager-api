@@ -3,6 +3,7 @@ package br.com.jpa.tarefas.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,15 +28,17 @@ public class Quadro {
 	String nome;
 	
 	@ManyToOne
-	@JoinColumn(name = "fk_usuario")
+	@JoinColumn(name = "id_usuario")
 	Usuario usuario;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "quadro")
+	@Column(nullable = true)
 	List<Coluna> colunas = new ArrayList<Coluna>();
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "quadro")
+	@Column(nullable = true)
 	List<Tarefa> tarefas = new ArrayList<Tarefa>();
 	
 }

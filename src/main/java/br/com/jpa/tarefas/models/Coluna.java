@@ -31,6 +31,6 @@ public class Coluna {
 	List<Tarefa> tarefas = new ArrayList<Tarefa>();
 	
 	@ManyToOne
-	@JoinColumn(name = "fk_quadro") 
+	@JoinColumn(name = "id_quadro") 
 	Quadro quadro;
 }

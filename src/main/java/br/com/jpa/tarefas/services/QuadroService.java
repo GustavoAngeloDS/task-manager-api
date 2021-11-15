@@ -20,27 +20,22 @@ public class QuadroService {
 	QuadroRepository quadroRepository;
 	
 	public List<Quadro> findAll(){
-		logger.info("Retornando informações de todos os quadros");
 		return quadroRepository.findAll();
 	}
 	
 	public Quadro findById(Integer id) {
-		logger.info("Retornando informações de quadro por ID");
 		return ((Optional<Quadro>) quadroRepository.findById(id)).get();
 	}
 	
 	public Quadro save(Quadro quadro) {
-		logger.info("Salvando novo quadro");
 		return quadroRepository.save(quadro);
 	}
 	
 	public void remove(Quadro quadro) {
-		logger.info("Removendo quadro");
 		quadroRepository.delete(quadro);
 	}
 	
 	public Quadro update(Quadro quadro) {
-		logger.info("Atualizando quadro");
 		Optional<Quadro> quadroOpt = quadroRepository.findById(quadro.getId());
 		Quadro quadroFinal = new Quadro();
 		
@@ -49,5 +44,4 @@ public class QuadroService {
 		
 		return quadroFinal;
 	}
-
 }
