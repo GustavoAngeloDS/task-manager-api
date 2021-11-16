@@ -32,12 +32,12 @@ public class Quadro {
 	Usuario usuario;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "quadro")
+	@OneToMany(mappedBy = "quadro", orphanRemoval = true)
 	@Column(nullable = true)
 	List<Coluna> colunas = new ArrayList<Coluna>();
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "quadro")
+	@OneToMany(mappedBy = "quadro", orphanRemoval = true)
 	@Column(nullable = true)
 	List<Tarefa> tarefas = new ArrayList<Tarefa>();
 	

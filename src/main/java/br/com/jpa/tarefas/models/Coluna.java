@@ -27,7 +27,7 @@ public class Coluna {
 	String nome;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "coluna")
+	@OneToMany(mappedBy = "coluna", orphanRemoval = true)
 	List<Tarefa> tarefas = new ArrayList<Tarefa>();
 	
 	@ManyToOne
